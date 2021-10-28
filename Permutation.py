@@ -82,6 +82,8 @@ def printAllPermutationsNODupsWithMap(lst):
     print(res)
 
 def substringThatSumToTarget():
+    #substring is continous
+    return
      
     
 def main():
