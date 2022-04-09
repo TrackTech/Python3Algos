@@ -56,7 +56,7 @@ def printAllPermutationsNODups(lst):
     lst.sort()
     dfs(lst,set([]),[],len(lst))
     print("---------------")
-    print(res)
+    print("PrintAllPermutationsNODups--",res)
     
 def printAllPermutationsNODupsWithMap(lst):
     res = []
