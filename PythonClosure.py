@@ -6,19 +6,19 @@ Created on Sun Mar  6 19:29:12 2022
 @author: rushikeshnaik
 """
 
-def party(greeting):
+def party(party_name):
     
-    def guest(msg): #create a function as a nested function
-        print(greeting+" "+msg) #use readonly state from outside
+    def guest(name): #create a function as a nested function
+        print(party_name+" "+name) #use readonly state from outside
     
     return guest
 
 def main():
     print("This is example of closure")
-    p1 = party("halloween")
-    p2 = party("new yar")
-    p1("Rushi")
-    p2("Luba")
+    guest1 = party("halloween")
+    guest2 = party("new yar")
+    guest1("Rushi")
+    guest2("Luba")
 
 if __name__ == "__main__":
     main()
