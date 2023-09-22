@@ -66,6 +66,28 @@ def decor(func):
 @decor   #First to execute
 def num():
     return 10
+
+def decor_round(func):
+    def inner(*args):
+        new_args = []
+        for arg in args:
+            print("arg-",arg,", round-",round(arg))
+            new_args.append(round(arg,0))
+        
+        x = func(*new_args)
+        return x
+    return inner
+
+@decor_round
+def multiply(x):
+    ret = x * x
+    print(ret)
+        
+def with_decor_multiply(x):
+    ret = x * x
+    print("X=",x,", ret=",ret)
+    print(ret)
+
     
 def main():
     testMe()
@@ -73,6 +95,8 @@ def main():
     testMe3(b=5,a=100)
     n = num()
     print(n)
+    multiply(5.2)
+    with_decor_multiply(5.2)
     
 if __name__ == "__main__":
     main()
