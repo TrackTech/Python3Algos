@@ -1,5 +1,5 @@
 class MyHashMap:
-
+# NOT tested
     def get_hash_key_old(self,key):
 
         n = key%self.size
