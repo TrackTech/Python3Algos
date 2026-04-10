@@ -6,10 +6,12 @@ class Ticket():
         self.comments = []
         self.queue = Queue(maxsize=100)
         self.running = True
-        self._background()
+        # self._background()
         self.workerThreads = None
         self.maxThreads=100
         self.threadLock = threading.Lock()
+
+        self._background()
 
     def _queueProcess(self):
         while self.running:
